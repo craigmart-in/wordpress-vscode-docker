@@ -27,7 +27,6 @@ services:
     env_file: .env
     environment:
       WORDPRESS_DEBUG: 1
-      DEVEOPMENT: 1
       WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_NAME: $DB_NAME
       WORDPRESS_DB_USER: $MARIADB_USER
