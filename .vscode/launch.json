@@ -10,7 +10,7 @@
             "request": "launch",
             "port": 9003,
             "pathMappings": {
-                "/var/www/html/": "${workspaceFolder}/.wordpress/",
+                "/var/www/html/wp-content/": "${workspaceFolder}/.data/wp-content",
                 "/var/www/html/wp-content/themes/theme/": "${workspaceFolder}/src/theme/"
             }
         }

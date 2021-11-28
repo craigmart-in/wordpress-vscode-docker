@@ -7,6 +7,8 @@ services:
     restart: always
     volumes:
       - db_data:/var/lib/mysql
+      # This will run any sql script in the initdb.d folder
+      #- ../.data/initdb.d:/docker-entrypoint-initdb.d
     env_file: .env
     environment:
       MYSQL_ROOT_PASSWORD: $MARIADB_ROOT_PASS
@@ -27,10 +29,10 @@ services:
       - "8000:80"
     restart: always
     volumes:
+      # Keep Core wordpress files in docker for speed.
+      # Only mount the wp-content folder
+      - ../.data/wp-content:/var/www/html/wp-content
       - ..:/workspace
-      - ../.wordpress:/var/www/html
-      # Update this to match your desired file structure
-      - ../src/theme:/var/www/html/wp-content/themes/theme
     env_file: .env
     environment:
       WORDPRESS_DEBUG: 1
@@ -47,6 +49,7 @@ services:
     restart: always
     environment:
       PMA_HOST: db
+      UPLOAD_LIMIT: 64M
 
 volumes:
   db_data:
