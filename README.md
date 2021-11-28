@@ -5,7 +5,7 @@ This repo is a starting point to develop wordpress themes and or plugins.
 - [Docker](https://www.docker.com/)
 - [Docker Compose](https://docs.docker.com/compose/install/)
 - [VS Code](https://code.visualstudio.com/)
-- [Remote - Containers Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers))
+- [Remote - Containers Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
 
 ## Setup
 - Create an `.env` file in the `.devcontainer` folder with the following keys and replace all values.
