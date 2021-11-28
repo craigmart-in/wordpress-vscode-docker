@@ -30,6 +30,7 @@ WORDPRESS_TAG=<Wordpress Tag>
 
 ## Importing existing Wordpress site
 - Perform the setup steps
+- Create a `.data` folder
 - Download wp-content from existing Wordpress site
 - Copy wp-content to ./.data/wp-content/
 - If theme under development is in the wp-content folder then move that folder to the src folder
