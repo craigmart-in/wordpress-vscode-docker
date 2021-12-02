@@ -30,6 +30,7 @@ services:
     restart: always
     volumes:
       # Keep Core wordpress files in docker for speed.
+      - wp_data:/var/www/html/
       # Only mount the wp-content folder
       - ../.data/wp-content:/var/www/html/wp-content
       - ..:/workspace
@@ -53,3 +54,4 @@ services:
 
 volumes:
   db_data:
+  wp_data:
